@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio de Servicios — Global de las Américas S.A.S</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #B8860B;
+    --gold-light: #D4A017;
+    --gold-pale: #F5E6B3;
+    --dark: #0D0D0D;
+    --dark-mid: #1A1A1A;
+    --dark-card: #141414;
+    --dark-border: #2A2A2A;
+    --white: #FFFFFF;
+    --offwhite: #F9F6EF;
+    --gray-light: #E8E3D8;
+    --gray-mid: #9A9082;
+    --text-muted: #6B6358;
+    --accent-teal: #1D7A6B;
+    --accent-teal-light: #4CADA0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--dark);
+    color: var(--offwhite);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(13,13,13,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--dark-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+    height: 64px;
+  }
+
+  .nav-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray-mid);
+    text-decoration: none;
+    transition: color 0.25s;
+    font-weight: 500;
+  }
+
+  .nav-links a:hover { color: var(--gold-light); }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 4rem 6rem;
+    position: relative;
+    background: var(--dark);
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 70% 40%, rgba(184,134,11,0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 80% at 0% 100%, rgba(29,122,107,0.06) 0%, transparent 50%);
+  }
+
+  .hero-grid-lines {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(184,134,11,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(184,134,11,0.04) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--white);
+    max-width: 820px;
+    margin-bottom: 1rem;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--gray-mid);
+    max-width: 520px;
+    margin-bottom: 3rem;
+    letter-spacing: 0.02em;
+    line-height: 1.8;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 4rem;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  .hero-nit {
+    position: absolute;
+    top: 88px;
+    right: 4rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+  }
+
+  /* ─── SECTION COMMON ─── */
+  section {
+    padding: 7rem 4rem;
+  }
+
+  .section-tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .section-tag::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 1rem;
+    line-height: 1.15;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .section-body {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--gray-mid);
+    max-width: 680px;
+    line-height: 1.9;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: var(--dark-border);
+  }
+
+  /* ─── ABOUT ─── */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 4rem;
+    align-items: start;
+  }
+
+  .about-block {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-block::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+  }
+
+  .about-block-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .about-block-text {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--gray-mid);
+    line-height: 1.9;
+  }
+
+  /* ─── SERVICES ─── */
+  .services-section {
+    background: var(--dark-mid);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    margin-top: 4rem;
+    background: var(--dark-border);
+  }
+
+  .service-card {
+    background: var(--dark-mid);
+    padding: 3rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+
+  .service-card:hover { background: #1E1E1E; }
+
+  .service-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.4s ease;
+  }
+
+  .service-card:hover::after { width: 100%; }
+
+  .service-icon {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    color: var(--gold-light);
+  }
+
+  .service-number {
+    position: absolute;
+    top: 2rem;
+    right: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: rgba(184,134,11,0.06);
+    line-height: 1;
+  }
+
+  .service-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .service-desc {
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--gray-mid);
+    line-height: 1.9;
+  }
+
+  .service-items {
+    list-style: none;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .service-items li {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .service-items li::before {
+    content: '—';
+    color: var(--gold);
+    flex-shrink: 0;
+    margin-top: 0.05em;
+  }
+
+  /* ─── CAPABILITIES ─── */
+  .caps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+  }
+
+  .cap-pill {
+    border: 1px solid var(--dark-border);
+    padding: 1rem 1.25rem;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--gray-light);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: border-color 0.25s, color 0.25s;
+  }
+
+  .cap-pill:hover {
+    border-color: var(--gold);
+    color: var(--gold-light);
+  }
+
+  .cap-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  /* ─── EXPERIENCE ─── */
+  .exp-section {
+    background: var(--dark);
+  }
+
+  .exp-intro {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5rem;
+    margin-bottom: 5rem;
+    align-items: start;
+  }
+
+  .exp-categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .exp-cat {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    padding: 1.75rem;
+    position: relative;
+  }
+
+  .exp-cat-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 0.5rem;
+  }
+
+  .exp-cat-sub {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 300;
+  }
+
+  /* ─── EXPERIENCE TABLE ─── */
+  .exp-table-wrapper {
+    overflow-x: auto;
+    margin-top: 2rem;
+  }
+
+  .exp-title-row {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 3rem 0 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .exp-title-row::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--dark-border);
+  }
+
+  table.exp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+  }
+
+  table.exp-table thead th {
+    text-align: left;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid var(--dark-border);
+    font-weight: 500;
+  }
+
+  table.exp-table tbody tr {
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    transition: background 0.2s;
+  }
+
+  table.exp-table tbody tr:hover {
+    background: rgba(184,134,11,0.03);
+  }
+
+  table.exp-table tbody td {
+    padding: 0.9rem 1rem;
+    color: var(--gray-mid);
+    font-weight: 300;
+    line-height: 1.5;
+    vertical-align: top;
+  }
+
+  table.exp-table tbody td:first-child {
+    color: var(--offwhite);
+    font-weight: 400;
+    max-width: 360px;
+  }
+
+  .tag-value {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    white-space: nowrap;
+  }
+
+  /* ─── DATOS ─── */
+  .datos-section {
+    background: var(--dark-mid);
+  }
+
+  .datos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--dark-border);
+    margin-top: 3.5rem;
+    border: 1px solid var(--dark-border);
+  }
+
+  .dato-row {
+    background: var(--dark-mid);
+    padding: 1.4rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .dato-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .dato-value {
+    font-size: 0.92rem;
+    font-weight: 400;
+    color: var(--offwhite);
+    text-align: right;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--dark);
+    border-top: 1px solid var(--dark-border);
+    padding: 3rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-brand span {
+    color: var(--gold-light);
+    font-style: italic;
+  }
+
+  .footer-nit {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+  }
+
+  .footer-contact {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .footer-contact a, .footer-contact p {
+    font-size: 0.85rem;
+    color: var(--gray-mid);
+    text-decoration: none;
+    font-weight: 300;
+  }
+
+  .footer-contact a:hover { color: var(--gold-light); }
+
+  .footer-bottom {
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    padding: 1rem 4rem;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    border-top: 1px solid var(--dark-border);
+  }
+
+  /* ─── PRINT ─── */
+  @media print {
+    nav { display: none; }
+    section { padding: 3rem 2rem; }
+    .hero { min-height: auto; padding: 4rem 2rem 3rem; }
+    .hero-bg, .hero-grid-lines { display: none; }
+    body { background: white; color: black; }
+    .section-title, .hero-title { color: black; }
+    .about-block, .service-card, .dato-row, .exp-cat { border-color: #ccc; background: white; }
+    footer { border-top: 1px solid #ccc; }
+  }
+
+  @media (max-width: 900px) {
+    nav { padding: 0 1.5rem; }
+    section { padding: 4rem 1.5rem; }
+    .hero { padding: 0 1.5rem 4rem; }
+    .services-grid, .caps-grid { grid-template-columns: 1fr; }
+    .about-grid, .exp-intro, .datos-grid, .exp-categories { grid-template-columns: 1fr; }
+    .hero-stats { flex-wrap: wrap; gap: 2rem; }
+    footer { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+    .footer-contact { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Global de las Américas · S.A.S</div>
+  <ul class="nav-links">
+    <li><a href="#quienes">Quiénes somos</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#experiencia">Experiencia</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-nit">NIT 901.236.570-9 · Sincelejo – Sucre</div>
+
+  <div style="position: relative; z-index: 1;">
+    <p class="hero-eyebrow">Portafolio de Servicios · 2025</p>
+    <h1 class="hero-title">
+      Ingeniería civil <em>con<br>visión de futuro.</em>
+    </h1>
+    <p class="hero-subtitle">
+      Empresa especializada en obras civiles, infraestructura vial y consultoría técnica para los sectores público y privado a nivel nacional.
+    </p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-number">+6</span>
+        <span class="stat-label">Años de experiencia</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Líneas de servicio</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Compromiso con la calidad</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">+50</span>
+        <span class="stat-label">Proyectos ejecutados<br><span style="font-size:0.65rem;font-family:'Barlow Condensed';letter-spacing:0.1em;color:var(--text-muted)">(acumulado con aliada FUNCREDES)</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIÉNES SOMOS -->
+<section id="quienes">
+  <p class="section-tag">Nuestra empresa</p>
+  <h2 class="section-title">Quiénes <em>somos</em></h2>
+  <p class="section-body">
+    Somos una empresa de ingeniería civil y arquitectura con amplia experiencia en la ejecución de proyectos de obras civiles, infraestructura y concesiones viales, en los sectores público y privado, que cumple con altos estándares de calidad, apoyados en un equipo humano competente, maquinaria y equipos especializados.
+  </p>
+
+  <div class="about-grid">
+    <div class="about-block">
+      <p class="about-block-title">Misión</p>
+      <p class="about-block-text">
+        Contribuir a mejorar la calidad de vida de la comunidad mediante la construcción y mantenimiento de obras de infraestructura de ingeniería civil, a empresas del sector público y privado a nivel nacional. Involucramos un equipo humano idóneo con altos valores éticos y morales, enmarcados en un sistema de gestión integral de calidad, seguridad y medio ambiente.
+      </p>
+    </div>
+    <div class="about-block">
+      <p class="about-block-title">Visión</p>
+      <p class="about-block-text">
+        Posicionarnos en el mercado y ser reconocidos en el año 2030 como una empresa líder en construcción de obras civiles a nivel nacional, respetuosos del recurso humano y de los estamentos jurídicos, promoviendo el desarrollo integral de la comunidad, previniendo riesgos y preservando el medio ambiente, dentro del marco de mejoramiento continuo.
+      </p>
+    </div>
+  </div>
+
+  <!-- Alianza estratégica -->
+  <div style="margin-top: 3rem; padding: 2.5rem; background: rgba(29,122,107,0.06); border: 1px solid rgba(76,173,160,0.2); position: relative; overflow: hidden;">
+    <div style="position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(to bottom,var(--accent-teal),transparent);"></div>
+    <p style="font-family:'Barlow Condensed';font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent-teal-light);margin-bottom:0.75rem;">Alianza Estratégica</p>
+    <p style="font-family:'Playfair Display';font-size:1.3rem;font-weight:600;color:var(--white);margin-bottom:0.75rem;">FUNCREDES — Organización Asociada</p>
+    <p style="font-size:0.9rem;font-weight:300;color:var(--gray-mid);line-height:1.9;max-width:780px;">
+      Global de las Américas S.A.S opera en alianza con la <strong style="color:var(--offwhite);font-weight:500;">Fundación para el Crecimiento y Desarrollo Integral Sostenible – FUNCREDES</strong> (NIT 900.542.707-9), organización sin ánimo de lucro fundada en 2012. Esta alianza nos permite integrar una extensa experiencia acumulada en obras civiles, suministros, gestión pública y desarrollo social en toda la Región Caribe y el Caribe colombiano.
+    </p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="services-section">
+  <p class="section-tag">Portafolio</p>
+  <h2 class="section-title">Nuestros <em>servicios</em></h2>
+  <p class="section-body">Tres líneas de servicio integradas que cubren el ciclo completo de los proyectos de infraestructura y desarrollo.</p>
+
+  <div class="services-grid">
+
+    <!-- Constructor -->
+    <div class="service-card">
+      <span class="service-number">01</span>
+      <span class="service-icon">⚙</span>
+      <h3 class="service-title">Constructor</h3>
+      <p class="service-desc">Ejecución de obras civiles de toda escala con maquinaria especializada y estrictos controles de calidad.</p>
+      <ul class="service-items">
+        <li>Obras civiles hidráulicas</li>
+        <li>Obras sanitarias y ambientales</li>
+        <li>Edificaciones y obras de urbanismo</li>
+        <li>Montajes electromecánicos</li>
+        <li>Obras para minería e hidrocarburos</li>
+        <li>Obras de transporte e infraestructura vial</li>
+        <li>Sistemas y servicios industriales</li>
+        <li>Mantenimiento y rehabilitación de vías</li>
+        <li>Construcción de alcantarillados y redes</li>
+        <li>Adecuación y mantenimiento de instituciones</li>
+      </ul>
+    </div>
+
+    <!-- Consultor -->
+    <div class="service-card">
+      <span class="service-number">02</span>
+      <span class="service-icon">◆</span>
+      <h3 class="service-title">Consultor</h3>
+      <p class="service-desc">Asesoría técnica especializada en planeación, diseño y gestión de proyectos para el sector público y privado.</p>
+      <ul class="service-items">
+        <li>Diseño arquitectónico y estructural</li>
+        <li>Estudios de transporte y movilidad</li>
+        <li>Consultoría ambiental</li>
+        <li>Telecomunicaciones e industria</li>
+        <li>Suministro de agua y saneamiento básico</li>
+        <li>Desarrollo urbano</li>
+        <li>Plan anual de adquisiciones (SECOP)</li>
+        <li>Modelo MIPG – Decreto 1499 de 2017</li>
+        <li>Planes de salud territorial</li>
+        <li>Informes de gestión y control interno</li>
+      </ul>
+    </div>
+
+    <!-- Proveedor -->
+    <div class="service-card">
+      <span class="service-number">03</span>
+      <span class="service-icon">◇</span>
+      <h3 class="service-title">Proveedor</h3>
+      <p class="service-desc">Suministro de materiales, equipos y elementos especializados para proyectos de infraestructura y salud.</p>
+      <ul class="service-items">
+        <li>Productos minerales y áridos</li>
+        <li>Maquinaria y aparatos industriales</li>
+        <li>Material eléctrico y sus partes</li>
+        <li>Material de transporte</li>
+        <li>Insumos hospitalarios y médico-quirúrgicos</li>
+        <li>Insumos alimenticios y logísticos</li>
+        <li>Equipos informáticos</li>
+        <li>Elementos de bioseguridad</li>
+        <li>Vallas metálicas de seguridad</li>
+        <li>Materiales de construcción y aseo</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CAPACIDADES -->
+<section>
+  <p class="section-tag">Capacidades técnicas</p>
+  <h2 class="section-title">Habilidades <em>diferenciadoras</em></h2>
+
+  <div class="caps-grid">
+    <div class="cap-pill"><span class="cap-dot"></span>AutoCAD & Diseño BIM</div>
+    <div class="cap-pill"><span class="cap-dot"></span>Microsoft Project</div>
+    <div class="cap-pill"><span class="cap-dot"></span>Cálculo estructural matricial</div>
+    <div class="cap-pill"><span class="cap-dot"></span>Redes de acueducto y alcantarillado</div>
+    <div class="cap-pill"><span class="cap-dot"></span>Diseño arquitectónico</div>
+    <div class="cap-pill"><span class="cap-dot"></span>Gestión MIPG · Decreto 1499/17</div>
+    <div class="cap-pill"><span class="cap-dot"></span>Liderazgo y dirección de obra</div>
+    <div class="cap-pill"><span class="cap-dot"></span>Herramientas Office avanzadas</div>
+    <div class="cap-pill"><span class="cap-dot"></span>Informes exógenos y tributarios</div>
+    <div class="cap-pill"><span class="cap-dot"></span>Planes de salud territorial</div>
+    <div class="cap-pill"><span class="cap-dot"></span>Supervisión e interventoría</div>
+    <div class="cap-pill"><span class="cap-dot"></span>Contratación pública SECOP II</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EXPERIENCIA -->
+<section id="experiencia" class="exp-section">
+  <p class="section-tag">Trayectoria</p>
+  <h2 class="section-title">Experiencia <em>acumulada</em></h2>
+  <p class="section-body" style="margin-bottom:2rem;">
+    La siguiente experiencia corresponde al trabajo ejecutado directamente por Global de las Américas S.A.S y al acumulado de su organización aliada FUNCREDES, que respalda nuestra capacidad técnica y financiera en procesos de contratación pública y privada.
+  </p>
+
+  <div class="exp-categories">
+    <div class="exp-cat">
+      <p class="exp-cat-title">Infraestructura vial y civil</p>
+      <p class="exp-cat-sub">Rehabilitación de vías, alcantarillados, canalizaciones, mantenimiento urbano y rural</p>
+    </div>
+    <div class="exp-cat">
+      <p class="exp-cat-title">Suministros especializados</p>
+      <p class="exp-cat-sub">Equipos médicos, insumos hospitalarios, elementos de seguridad pública y dotaciones</p>
+    </div>
+    <div class="exp-cat">
+      <p class="exp-cat-title">Consultoría y gestión pública</p>
+      <p class="exp-cat-sub">MIPG, planes de salud, informes exógenos, contratación y participación ciudadana</p>
+    </div>
+    <div class="exp-cat">
+      <p class="exp-cat-title">Apoyo logístico y social</p>
+      <p class="exp-cat-sub">Procesos electorales, eventos culturales, programas de bienestar y atención comunitaria</p>
+    </div>
+  </div>
+
+  <!-- OBRAS CIVILES -->
+  <p class="exp-title-row">Obras civiles e infraestructura</p>
+  <div class="exp-table-wrapper">
+    <table class="exp-table">
+      <thead>
+        <tr>
+          <th>Descripción del proyecto</th>
+          <th>Entidad contratante</th>
+          <th>Contrato</th>
+          <th>Valor</th>
+          <th>Año</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Mantenimiento y adecuación general de las dependencias de la Alcaldía Municipal de San Onofre, Sucre</td><td>Alcaldía San Onofre</td><td>MSO-CD-IP014-2013</td><td class="tag-value">$90.000.000</td><td>2013</td></tr>
+        <tr><td>Adecuación del patio de recreo en material arenoso — Escuela Urbana San José, San Onofre</td><td>Alcaldía San Onofre</td><td>MSO-MIN-005-2014</td><td class="tag-value">$14.253.125</td><td>2014</td></tr>
+        <tr><td>Suministro e instalación de mezcla asfáltica para reparcheo de tramos de calle — sector Puerto, San Onofre</td><td>Alcaldía San Onofre</td><td>MSO-MIN-047-2014</td><td class="tag-value">$17.200.000</td><td>2014</td></tr>
+        <tr><td>Rocería y limpieza de la vía San Onofre – Rincón del Mar – Ramal Berrugas</td><td>Alcaldía San Onofre</td><td>MSO-MIN-050-2014</td><td class="tag-value">$17.200.000</td><td>2014</td></tr>
+        <tr><td>Campaña de aseo, barrido de calles y recolección de residuos sólidos — Corregimiento San Antonio</td><td>Alcaldía San Onofre</td><td>MSO-MIN-051-2014</td><td class="tag-value">$17.200.000</td><td>2014</td></tr>
+        <tr><td>Mantenimiento y rehabilitación de la Carrera 15 entre Calles 20 y 24 — Barrio Madre Bernarda</td><td>Alcaldía San Onofre</td><td>MSO-MIN-053-2014</td><td class="tag-value">$16.347.500</td><td>2014</td></tr>
+        <tr><td>Construcción de alcantarilla doble en la calle Palo Alto, San Onofre</td><td>Alcaldía San Onofre</td><td>MSO-CD-IP-009-2014</td><td class="tag-value">$26.479.241</td><td>2014</td></tr>
+        <tr><td>Construcción de 140 metros lineales de alcantarillado en el Barrio Palito, San Onofre</td><td>Alcaldía San Onofre</td><td>MSO-CD-IP-010-2014</td><td class="tag-value">$60.923.093</td><td>2014</td></tr>
+        <tr><td>Rehabilitación de la vía Pisisi – Palacio, San Onofre</td><td>Alcaldía San Onofre</td><td>MSP-CD-IP-010-2014</td><td class="tag-value">$40.000.000</td><td>2014</td></tr>
+        <tr><td>Adecuación y mantenimiento de instituciones educativas del municipio de San Onofre</td><td>Alcaldía San Onofre</td><td>MSP-CD-SG-011-2014</td><td class="tag-value">$248.000.000</td><td>2014</td></tr>
+        <tr><td>Mantenimiento preventivo de redes de acueducto — Corregimientos Palo Alto y Sabanas de Mucacal</td><td>Alcaldía San Onofre</td><td>MSO-MIN-057-2014</td><td class="tag-value">$30.000.000</td><td>2014</td></tr>
+        <tr><td>Rehabilitación en puntos críticos — vía San Onofre Berrugas, Ramal Rincón del Mar</td><td>Alcaldía San Onofre</td><td>MSO-CD-002-012-2015</td><td class="tag-value">$210.000.000</td><td>2015</td></tr>
+        <tr><td>Mantenimiento de escenarios deportivos — Cancha La Pola y Barrio El Porvenir</td><td>Alcaldía San Onofre</td><td>MSO-MIN-066-2015</td><td class="tag-value">$18.000.000</td><td>2015</td></tr>
+        <tr><td>Mantenimiento de calles internas sector Calle Palo Alto, San Onofre</td><td>Alcaldía San Onofre</td><td>MSO-CD-SGP-LI021-2015</td><td class="tag-value">$18.000.000</td><td>2015</td></tr>
+        <tr><td>Mantenimiento y reparación Cancha Kennedy, Sincelejo</td><td>INDER Sucre</td><td>MC-015-2015</td><td class="tag-value">$18.000.000</td><td>2015</td></tr>
+        <tr><td>Mantenimiento de pintura del parque Barrio Ciudadela Suiza, Sincelejo</td><td>INDER Sucre</td><td>MC-016-2015</td><td class="tag-value">$18.000.000</td><td>2015</td></tr>
+        <tr><td>Mantenimiento del Centro Educativo Las Brisas, Biblioteca Municipal y sede Más Familias en Acción</td><td>Alcaldía San Onofre</td><td>MSO-CIT-004-2016</td><td class="tag-value">$45.000.000</td><td>2016</td></tr>
+        <tr><td>Mejoramiento y mantenimiento vía Corregimiento San Antonio – límites Ñanguma, Bolívar</td><td>Alcaldía San Onofre</td><td>MSO-CIT-003-2017</td><td class="tag-value">$174.000.000</td><td>2017</td></tr>
+        <tr><td>Mejoramiento y mantenimiento vía La Pelona – Ye del Corregimiento Higuerón, San Onofre</td><td>Alcaldía San Onofre</td><td>MSO-CIT-002-2017</td><td class="tag-value">$448.343.058</td><td>2017</td></tr>
+        <tr><td>Rehabilitación y descontaminación — canalización del Arroyo Canime, Canal Grande, San Onofre</td><td>Alcaldía San Onofre</td><td>MSO-CIT-004-2017</td><td class="tag-value">$457.638.706</td><td>2017</td></tr>
+        <tr><td>Mejoramiento de condiciones físicas en entornos escolares — zona rural San Onofre</td><td>Alcaldía San Onofre</td><td>OJ-CD-CA-001-2019</td><td class="tag-value">$450.000.000</td><td>2019</td></tr>
+        <tr><td>Reparaciones locativas — Patrimonio Autónomo Subordinado Las Cruces (Fiduciaria Colpatria)</td><td>Alianza Fiduciaria</td><td>015 de 2019</td><td class="tag-value">$79.543.695</td><td>2019</td></tr>
+        <tr><td>Reparaciones locativas — Patrimonio Autónomo Subordinado Villa Javier (Fiduciaria Colpatria)</td><td>Alianza Fiduciaria</td><td>014 de 2019</td><td class="tag-value">$93.197.367</td><td>2019</td></tr>
+        <tr><td>Mantenimiento preventivo/correctivo — Fideicomiso San Victorino Centro Internacional de Comercio Mayorista</td><td>Alianza Fiduciaria</td><td>001 de 2020</td><td class="tag-value">$118.467.839</td><td>2020</td></tr>
+        <tr><td>Mantenimiento integral del Cementerio Central del Municipio de San Onofre</td><td>Alcaldía San Onofre</td><td>MC-044-2022</td><td class="tag-value">$25.999.992</td><td>2022</td></tr>
+        <tr><td>Elaboración y adquisición de vallas metálicas de seguridad — Municipio de Ovejas</td><td>Alcaldía Ovejas</td><td>SASIP-03-2023</td><td class="tag-value">$250.000.000</td><td>2023</td></tr>
+        <tr><td>Adquisición de vallas metálicas de seguridad — Municipio de Corozal</td><td>Municipio Corozal</td><td>SASI-CS-003-24</td><td class="tag-value">$100.000.000</td><td>2024</td></tr>
+        <tr><td>Adquisición de 50 vallas metálicas — Municipio de Majagual</td><td>Municipio Majagual</td><td>257 de 2024</td><td class="tag-value">$96.000.000</td><td>2024</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SUMINISTROS -->
+  <p class="exp-title-row">Suministros especializados</p>
+  <div class="exp-table-wrapper">
+    <table class="exp-table">
+      <thead>
+        <tr>
+          <th>Descripción del proyecto</th>
+          <th>Entidad contratante</th>
+          <th>Contrato</th>
+          <th>Valor</th>
+          <th>Año</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Suministro de insumos y elementos para aseo, limpieza y desinfección — E.S.E. Hospital Santiago de Tolú</td><td>Hospital Santiago de Tolú</td><td>20 ESE 01-22-2014</td><td class="tag-value">$45.172.395</td><td>2014</td></tr>
+        <tr><td>Suministro de insumos y elementos de aseo — E.S.E. Hospital Santiago de Tolú (año 2)</td><td>Hospital Santiago de Tolú</td><td>20 ESE 01-22-2015</td><td class="tag-value">$50.000.000</td><td>2015</td></tr>
+        <tr><td>Suministro de insumos de aseo — E.S.E. Hospital Santiago de Tolú (vigencia 2016)</td><td>Hospital Santiago de Tolú</td><td>05-05-01-2016</td><td class="tag-value">$11.995.727</td><td>2016</td></tr>
+        <tr><td>Suministro de almuerzo, refrigerio y apoyo logístico para eventos — E.S.E. Hospital Local San Onofre</td><td>E.S.E. Hospital San Onofre</td><td>01-07-01-2016</td><td class="tag-value">$50.000.000</td><td>2016</td></tr>
+        <tr><td>Compra de equipos informáticos — E.S.E. Hospital Local San Onofre</td><td>E.S.E. Hospital San Onofre</td><td>104-2018</td><td class="tag-value">$35.100.000</td><td>2018</td></tr>
+        <tr><td>Suministro de material médico-quirúrgico — E.S.E. Hospital Local San Onofre</td><td>E.S.E. Hospital San Onofre</td><td>139-2018</td><td class="tag-value">$160.000.000</td><td>2018</td></tr>
+        <tr><td>Suministro de medicamentos — E.S.E. Hospital Local San Onofre</td><td>E.S.E. Hospital San Onofre</td><td>140-2018</td><td class="tag-value">$60.000.000</td><td>2018</td></tr>
+        <tr><td>Suministro de elementos y ropa de protección urgente — E.S.E. Cartagena de Indias de Corozal</td><td>E.S.E. Cartagena de Indias</td><td>010-2021</td><td class="tag-value">$43.635.000</td><td>2021</td></tr>
+        <tr><td>Suministro de equipos médicos e instrumentales — áreas laboratorio, odontología y urgencias, Hospital San Onofre</td><td>E.S.E. Hospital San Onofre</td><td>857-2022</td><td class="tag-value">$591.354.958</td><td>2022</td></tr>
+        <tr><td>Dotación de sillas de ruedas especiales y estándar — población con discapacidad, Santiago de Tolú</td><td>Municipio Santiago de Tolú</td><td>ST-MC-016-2024</td><td class="tag-value">$96.000.000</td><td>2024</td></tr>
+        <tr><td>Dotación de la Comisaría de Familia del Municipio de Soplaviento, Bolívar</td><td>Municipio Soplaviento</td><td>03-07-2024</td><td class="tag-value">$55.000.000</td><td>2024</td></tr>
+        <tr><td>Materiales de formación área de salud (Enfermería) para programas SENA Regional Sucre</td><td>SENA Regional Sucre</td><td>MC-SCR-0068-2024</td><td class="tag-value">$100.000.000</td><td>2024</td></tr>
+        <tr><td>Vestuario y material educacional para actos culturales — aprendices SENA Regional Sucre</td><td>SENA Regional Sucre</td><td>MC-SCR-0041-2024</td><td class="tag-value">$47.000.000</td><td>2024</td></tr>
+        <tr><td>Adquisición de materiales de formación SENA — área de salud (Enfermería), materiales titulados</td><td>SENA Regional Sucre</td><td>MC-SCR-0068-2024</td><td class="tag-value">$100.000.000</td><td>2024</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CONSULTORÍA -->
+  <p class="exp-title-row">Consultoría, gestión pública y salud</p>
+  <div class="exp-table-wrapper">
+    <table class="exp-table">
+      <thead>
+        <tr>
+          <th>Descripción del proyecto</th>
+          <th>Entidad contratante</th>
+          <th>Valor</th>
+          <th>Año</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Monitoreo, seguimiento, control y evaluación de proyectos — Sistema General de Regalías, San Onofre</td><td>Alcaldía San Onofre</td><td class="tag-value">$49.000.000</td><td>2014</td></tr>
+        <tr><td>Elaboración del Plan Anual de Adquisiciones 2016 — asesoría SECOP, San Onofre</td><td>Alcaldía San Onofre</td><td class="tag-value">$18.000.000</td><td>2016</td></tr>
+        <tr><td>Prestación de servicios profesionales — fortalecimiento promoción y prevención de enfermedades, Majagual</td><td>Alcaldía Majagual</td><td class="tag-value">$181.608.000</td><td>2016</td></tr>
+        <tr><td>Acompañamiento oficina jurídica — construcción expediente físico y magnético, procesos judiciales San Onofre</td><td>Alcaldía San Onofre</td><td class="tag-value">$170.000.000</td><td>2017</td></tr>
+        <tr><td>Elaboración y rendición de información exógena año gravable 2016 — Secretaría Hacienda Santiago de Tolú</td><td>Alcaldía Santiago de Tolú</td><td class="tag-value">$31.999.998</td><td>2017</td></tr>
+        <tr><td>Formulación del Plan Anticorrupción y Atención al Ciudadano 2017 + Plan Anual Adquisiciones, San Onofre</td><td>Alcaldía San Onofre</td><td class="tag-value">$36.000.000</td><td>2017</td></tr>
+        <tr><td>Ejecución de actividades de salud pública — Plan de Salud Territorial 2019, Nueva Granada, Magdalena</td><td>Alcaldía Nueva Granada</td><td class="tag-value">$136.157.631</td><td>2019</td></tr>
+        <tr><td>Implementación MIPG Decreto 1499/2017 — Alcaldía Municipal de Guaranda, Sucre</td><td>Alcaldía Guaranda</td><td class="tag-value">$80.000.000</td><td>2019</td></tr>
+        <tr><td>Implementación de gestión documental integral — E.S.E. Hospital Local San José, San Bernardo del Viento</td><td>E.S.E. Hospital San Bernardo</td><td class="tag-value">$124.000.000</td><td>2019</td></tr>
+        <tr><td>Elaboración Plan Territorial en Salud (PTS) 2020–2023 — Santiago de Tolú</td><td>Alcaldía Santiago de Tolú</td><td class="tag-value">$20.000.000</td><td>2020</td></tr>
+        <tr><td>Implementación MIPG — E.S.E. Centro de Salud San José de Toluviejo</td><td>E.S.E. Toluviejo</td><td class="tag-value">$33.450.000</td><td>2021</td></tr>
+        <tr><td>Implementación MIPG — E.S.E. Centro de Salud Inmaculada Concepción de Galeras</td><td>E.S.E. Galeras</td><td class="tag-value">$35.000.000</td><td>2021</td></tr>
+        <tr><td>Estudio de confianza y participación ciudadana en la gestión — Gobernación de Sucre</td><td>Gobernación de Sucre</td><td class="tag-value">$44.360.820</td><td>2021</td></tr>
+        <tr><td>Apoyo gestión MIPG — E.S.E. Hospital Local San Onofre</td><td>E.S.E. Hospital San Onofre</td><td class="tag-value">$50.000.000</td><td>2022</td></tr>
+        <tr><td>Asesoría implementación MIPG 2022 — Alcaldía Municipal de Ovejas, Sucre</td><td>Alcaldía Ovejas</td><td class="tag-value">$40.000.000</td><td>2022</td></tr>
+        <tr><td>Actualización Manual de Contratación + Manual Supervisión e Interventoría — E.S.E. Hospital San Onofre</td><td>E.S.E. Hospital San Onofre</td><td class="tag-value">$40.000.000</td><td>2023</td></tr>
+        <tr><td>Actualización e implementación MIPG — Alcaldía Municipal de Coveñas, Sucre</td><td>Alcaldía Coveñas</td><td class="tag-value">$119.948.136</td><td>2023</td></tr>
+        <tr><td>Actualización Plan de Gestión Integral de Residuos Hospitalarios — E.S.E. Hospital San Onofre</td><td>E.S.E. Hospital San Onofre</td><td class="tag-value">$35.000.000</td><td>2023</td></tr>
+        <tr><td>Servicios asistenciales de salud integral — Sindicato Regional Trabajadores Área de la Salud</td><td>SINDICATO Regional Salud</td><td class="tag-value">$5.184.000.000</td><td>2023</td></tr>
+        <tr><td>Atención a población vulnerable en salud mental — Sindicato Regional Trabajadores Área de la Salud</td><td>SINDICATO Regional Salud</td><td class="tag-value">$873.000.000</td><td>2023</td></tr>
+        <tr><td>Jornadas de salud y capacitación en programas epidemiológicos — Sindicato Regional Salud</td><td>SINDICATO Regional Salud</td><td class="tag-value">$123.000.000</td><td>2023</td></tr>
+        <tr><td>Prevención y control del dengue — Programa "Sucre Sin Dengue", Departamento de Sucre</td><td>SERVIMOS SGC S.A.S</td><td class="tag-value">$2.406.470.000</td><td>2024</td></tr>
+        <tr><td>Implementación MIPG — Alcaldía Municipal de Santiago de Tolú (versión 4 y 5)</td><td>Alcaldía Santiago de Tolú</td><td class="tag-value">$153.297.300</td><td>2024</td></tr>
+        <tr><td>Plan Territorial de Salud 2024–2027 — Municipio de Galeras, Sucre</td><td>Alcaldía Galeras</td><td class="tag-value">$47.000.000</td><td>2024</td></tr>
+        <tr><td>Implementación MIPG — E.S.E. Centro de Salud San José I Nivel, San Marcos, Sucre</td><td>E.S.E. San Marcos</td><td class="tag-value">$35.206.500</td><td>2024</td></tr>
+        <tr><td>Fortalecimiento competencias comunicativas docentes para educación inclusiva — Municipio Buenavista, Sucre</td><td>Municipio Buenavista</td><td class="tag-value">$100.013.254</td><td>2025</td></tr>
+        <tr><td>Fortalecimiento competencias comunicativas docentes — Municipio de Sucre, Sucre</td><td>Municipio Sucre</td><td class="tag-value">$88.571.428</td><td>2025</td></tr>
+        <tr><td>Apoyo gestión Secretaría de Salud — inspección, vigilancia y auditoría a EAPB, Santa Ana, Magdalena</td><td>Municipio Santa Ana</td><td class="tag-value">$75.000.000</td><td>2025</td></tr>
+        <tr><td>Fortalecimiento autoridad sanitaria — Componente Operativo Anual de Inversiones, Santa Ana, Magdalena</td><td>Municipio Santa Ana</td><td class="tag-value">$275.300.907</td><td>2025</td></tr>
+        <tr><td>Desarrollo MIPG y Sistema de Gestión de Calidad — Municipio de Altos del Rosario, Bolívar</td><td>Municipio Altos del Rosario</td><td class="tag-value">$160.000.000</td><td>2025</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- DATOS DE LA EMPRESA -->
+<section id="contacto" class="datos-section">
+  <p class="section-tag">Información legal</p>
+  <h2 class="section-title">Datos de <em>la empresa</em></h2>
+
+  <div class="datos-grid">
+    <div class="dato-row">
+      <span class="dato-label">Razón social</span>
+      <span class="dato-value">Global de las Américas S.A.S</span>
+    </div>
+    <div class="dato-row">
+      <span class="dato-label">NIT</span>
+      <span class="dato-value">901.236.570-9</span>
+    </div>
+    <div class="dato-row">
+      <span class="dato-label">Fecha de constitución</span>
+      <span class="dato-value">07 de diciembre de 2018</span>
+    </div>
+    <div class="dato-row">
+      <span class="dato-label">Domicilio</span>
+      <span class="dato-value">Sincelejo – Sucre, Colombia</span>
+    </div>
+    <div class="dato-row">
+      <span class="dato-label">Dirección</span>
+      <span class="dato-value">Cra 18 No. 23-20, Piso 6 Oficina 605-5, Edificio Caja Agraria</span>
+    </div>
+    <div class="dato-row">
+      <span class="dato-label">Teléfonos</span>
+      <span class="dato-value">300 407 9001 · 311 429 6768</span>
+    </div>
+    <div class="dato-row">
+      <span class="dato-label">Correo electrónico</span>
+      <span class="dato-value">ivanmolinrev@globaldelasamericas.co</span>
+    </div>
+    <div class="dato-row">
+      <span class="dato-label">Representante legal</span>
+      <span class="dato-value">Iván Emiro Molina Revollo</span>
+    </div>
+  </div>
+
+  <!-- Aliada FUNCREDES datos -->
+  <div style="margin-top: 2rem; padding: 2rem; border: 1px solid rgba(76,173,160,0.2); background: rgba(29,122,107,0.04);">
+    <p style="font-family:'Barlow Condensed';font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent-teal-light);margin-bottom:1rem;">Organización aliada</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(76,173,160,0.15);">
+      <div style="background:var(--dark-mid);padding:1rem 1.5rem;">
+        <p style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.3rem;">Fundación</p>
+        <p style="font-size:0.9rem;color:var(--offwhite);">FUNCREDES</p>
+      </div>
+      <div style="background:var(--dark-mid);padding:1rem 1.5rem;">
+        <p style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.3rem;">NIT</p>
+        <p style="font-size:0.9rem;color:var(--offwhite);">900.542.707-9</p>
+      </div>
+      <div style="background:var(--dark-mid);padding:1rem 1.5rem;">
+        <p style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.3rem;">Constitución</p>
+        <p style="font-size:0.9rem;color:var(--offwhite);">02 de agosto de 2012</p>
+      </div>
+      <div style="background:var(--dark-mid);padding:1rem 1.5rem;">
+        <p style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.3rem;">Web</p>
+        <p style="font-size:0.9rem;color:var(--accent-teal-light);">www.funcredes.com</p>
+      </div>
+      <div style="background:var(--dark-mid);padding:1rem 1.5rem;">
+        <p style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.3rem;">Correo</p>
+        <p style="font-size:0.9rem;color:var(--offwhite);">ivanmolinrev@funcredes.com</p>
+      </div>
+      <div style="background:var(--dark-mid);padding:1rem 1.5rem;">
+        <p style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.3rem;">Representante</p>
+        <p style="font-size:0.9rem;color:var(--offwhite);">Iván Emiro Molina Revollo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <p class="footer-brand">Global de las <span>Américas</span><br>S.A.S</p>
+    <p class="footer-nit">NIT 901.236.570-9 · Sincelejo, Sucre · Colombia</p>
+  </div>
+  <div class="footer-contact">
+    <p>Cra 18 No. 23-20, Piso 6 Of. 605-5, Edif. Caja Agraria</p>
+    <p>Sincelejo – Sucre, Colombia</p>
+    <a href="mailto:ivanmolinrev@globaldelasamericas.co">ivanmolinrev@globaldelasamericas.co</a>
+    <p>Tel. 300 407 9001 · 311 429 8768</p>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  Portafolio de Servicios · Global de las Américas S.A.S · 2025 · Todos los derechos reservados
+</div>
+
+</body>
+</html>
