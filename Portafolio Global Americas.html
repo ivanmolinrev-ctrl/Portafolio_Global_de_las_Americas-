@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portafolio de Servicios — Global de las Américas S.A.S</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@300;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <style>
   :root {
     --gold: #B8860B;
@@ -29,13 +31,16 @@
 
   body {
     font-family: 'Barlow', sans-serif;
-    background: var(--dark);
+    background: 
+      radial-gradient(ellipse at top right, rgba(184,134,11,0.03) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom left, rgba(29,122,107,0.04) 0%, transparent 50%),
+      linear-gradient(180deg, #0a0a0a 0%, #0D0D0D 50%, #0f0f0f 100%);
     color: var(--offwhite);
     line-height: 1.6;
     overflow-x: hidden;
   }
 
-  /* ─── NAV ─── */
+
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -77,7 +82,7 @@
 
   .nav-links a:hover { color: var(--gold-light); }
 
-  /* ─── HERO ─── */
+
   .hero {
     min-height: 100vh;
     display: flex;
@@ -85,7 +90,7 @@
     justify-content: flex-end;
     padding: 0 4rem 6rem;
     position: relative;
-    background: var(--dark);
+    background: transparent;
     overflow: hidden;
   }
 
@@ -190,7 +195,7 @@
     writing-mode: vertical-rl;
   }
 
-  /* ─── SECTION COMMON ─── */
+
   section {
     padding: 7rem 4rem;
   }
@@ -242,7 +247,7 @@
     background: var(--dark-border);
   }
 
-  /* ─── ABOUT ─── */
+
   .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -284,9 +289,9 @@
     line-height: 1.9;
   }
 
-  /* ─── SERVICES ─── */
+
   .services-section {
-    background: var(--dark-mid);
+    background: rgba(26,26,26,0.4);
   }
 
   .services-grid {
@@ -378,7 +383,7 @@
     margin-top: 0.05em;
   }
 
-  /* ─── CAPABILITIES ─── */
+
   .caps-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -412,9 +417,9 @@
     flex-shrink: 0;
   }
 
-  /* ─── EXPERIENCE ─── */
+
   .exp-section {
-    background: var(--dark);
+    background: transparent;
   }
 
   .exp-intro {
@@ -455,7 +460,7 @@
     font-weight: 300;
   }
 
-  /* ─── EXPERIENCE TABLE ─── */
+
   .exp-table-wrapper {
     overflow-x: auto;
     margin-top: 2rem;
@@ -529,9 +534,9 @@
     white-space: nowrap;
   }
 
-  /* ─── DATOS ─── */
+
   .datos-section {
-    background: var(--dark-mid);
+    background: rgba(26,26,26,0.4);
   }
 
   .datos-grid {
@@ -568,9 +573,9 @@
     text-align: right;
   }
 
-  /* ─── FOOTER ─── */
+
   footer {
-    background: var(--dark);
+    background: transparent;
     border-top: 1px solid var(--dark-border);
     padding: 3rem 4rem;
     display: flex;
@@ -624,7 +629,7 @@
     border-top: 1px solid var(--dark-border);
   }
 
-  /* ─── PRINT ─── */
+
   @media print {
     nav { display: none; }
     section { padding: 3rem 2rem; }
@@ -646,7 +651,11 @@
     footer { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
     .footer-contact { text-align: left; }
   }
+
+  .service-card,.cap-pill,table.exp-table tbody tr{will-change:transform}
 </style>
+
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@300;500;700&display=swap"></noscript>
 </head>
 <body>
 
@@ -667,7 +676,7 @@
   <div class="hero-grid-lines"></div>
   <div class="hero-nit">NIT 901.236.570-9 · Sincelejo – Sucre</div>
 
-  <div style="position: relative; z-index: 1;">
+  <div style="position:relative;z-index:1;">
     <p class="hero-eyebrow">Portafolio de Servicios · 2025</p>
     <h1 class="hero-title">
       Ingeniería civil <em>con<br>visión de futuro.</em>
@@ -720,7 +729,7 @@
   </div>
 
   <!-- Alianza estratégica -->
-  <div style="margin-top: 3rem; padding: 2.5rem; background: rgba(29,122,107,0.06); border: 1px solid rgba(76,173,160,0.2); position: relative; overflow: hidden;">
+  <div style="margin-top:3rem;padding:2.5rem;background:rgba(29,122,107,0.06);border:1px solid rgba(76,173,160,0.2);position:relative;overflow:hidden;">
     <div style="position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(to bottom,var(--accent-teal),transparent);"></div>
     <p style="font-family:'Barlow Condensed';font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent-teal-light);margin-bottom:0.75rem;">Alianza Estratégica</p>
     <p style="font-family:'Playfair Display';font-size:1.3rem;font-weight:600;color:var(--white);margin-bottom:0.75rem;">FUNCREDES — Organización Asociada</p>
@@ -1025,7 +1034,7 @@
   </div>
 
   <!-- Aliada FUNCREDES datos -->
-  <div style="margin-top: 2rem; padding: 2rem; border: 1px solid rgba(76,173,160,0.2); background: rgba(29,122,107,0.04);">
+  <div style="margin-top:2rem;padding:2rem;border:1px solid rgba(76,173,160,0.2);background:rgba(29,122,107,0.04);">
     <p style="font-family:'Barlow Condensed';font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent-teal-light);margin-bottom:1rem;">Organización aliada</p>
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(76,173,160,0.15);">
       <div style="background:var(--dark-mid);padding:1rem 1.5rem;">
